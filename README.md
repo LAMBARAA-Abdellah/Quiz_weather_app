@@ -45,7 +45,7 @@ Allows the user to search a city and get the 5-day forecast from OpenWeatherMap.
 - Compatible with Flutter Web (declared `.env` in assets)
 
 ### 📸 Screenshot:
-### Weather resulat for my city Safi:
+### Weather resulat for my city Safi: 
 ![Weather Forecast](captures/weather.jpg)
 
 ---
