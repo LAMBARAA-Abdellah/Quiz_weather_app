@@ -21,8 +21,8 @@ The quiz module displays 10 multiple-choice questions (MCQs) about Flutter, Dart
 - Visual feedback for selected answers.
 
 ### 📸 Screenshots:
-![Quiz Question](quiz_questions.jpg)
-![Quiz Result](score_quiz.jpg)
+![Quiz Question](captures/quiz_questions.jpg)
+![Quiz Result](captures/score_quiz.jpg)
 
 ---
 
@@ -43,7 +43,7 @@ Allows the user to search a city and get the 5-day forecast from OpenWeatherMap.
 - Compatible with Flutter Web (declared `.env` in assets)
 
 ### 📸 Screenshot:
-![Weather Forecast](weather.jpg)
+![Weather Forecast](captures/weather.jpg)
 
 ---
 
