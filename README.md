@@ -1,16 +1,95 @@
-# mobile_app_demo
+# II-BDCC Flutter App – Modules Quiz & Weather
 
-A new Flutter project.
+This project is a Flutter web/mobile application featuring two main modules:
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📘 1. Quiz Module
 
-A few resources to get you started if this is your first Flutter project:
+### 🧩 Description:
+The quiz module displays 10 multiple-choice questions (MCQs) about Flutter, Dart, Java, etc.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- ✅ Each question has 4 options.
+- ✅ The user selects an answer and presses "Next".
+- ✅ At the end, the score is displayed: `You scored X out of 10`.
+- ✅ A "Restart Quiz" button allows retrying the quiz.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🔧 Technical Features:
+- `List<Question>` to store questions.
+- `setState()` used to track current question and selected answer.
+- Score is calculated in real-time.
+- Visual feedback for selected answers.
+
+### 📸 Screenshots:
+![Quiz Question](quiz_questions.jpg)
+![Quiz Result](score_quiz.jpg)
+
+---
+
+## 🌦 2. Weather Module
+
+### 🌍 Description:
+Allows the user to search a city and get the 5-day forecast from OpenWeatherMap.
+
+- ✅ Uses OpenWeatherMap API
+- ✅ `.env` file holds the API key (for security)
+- ✅ Weather data filtered at 12:00:00 each day
+- ✅ Displayed as cards (date + description + temperature)
+
+### 🔧 Technical Features:
+- Uses `flutter_dotenv` to load `.env`
+- Uses `http` for GET requests to weather API
+- Handles errors and loading states
+- Compatible with Flutter Web (declared `.env` in assets)
+
+### 📸 Screenshot:
+![Weather Forecast](weather.jpg)
+
+---
+
+## 🔐 Example `.env` File (at project root)
+```
+OPENWEATHER_API_KEY=your_openweathermap_api_key
+```
+
+---
+
+## 📁 Folder Structure Summary
+```
+lib/
+├── main.dart          # App entry with TabBar (Quiz / Weather)
+├── quiz_page.dart     # Quiz logic, scoring, and UI
+├── weather_page.dart  # API call, filtering, and UI display
+
+
+└── .env               # API key stored here
+
+captures/
+├── quiz_questions.jpg # Screenshot of quiz interface
+├── score_quiz.jpg     # Screenshot of final quiz result
+└── weather.jpg        # Screenshot of weather module
+```
+
+---
+
+## ✅ How to Run
+
+```bash
+flutter pub get
+flutter run -d chrome
+```
+
+Make sure your `.env` file is added in `pubspec.yaml`:
+
+```yaml
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+```
+
+---
+
+## 👨‍💻 Author
+
+Abdellah Lambaraa – II-BDCC Project
